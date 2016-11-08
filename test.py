@@ -1,7 +1,7 @@
 import argparse
 from datetime import datetime
 import numpy as np
-from _test import mult, mult_tensor, mult_broken
+from _test import mult, mult_broken
 
 
 parser = argparse.ArgumentParser(description='Run test.')
@@ -22,11 +22,11 @@ a = np.random.random((I, J))
 b = np.random.random((J, K))
 c = a.dot(b)
 normc = np.linalg.norm(c)
-print('norm of c: {}'.format(normc))
-print('compute a x b {} times using...'.format(n_iter))
+print('norm of a x b: {}'.format(normc))
 
-dot = lambda x, y: x.dot(y)
-for f in [mult, mult_tensor, mult_broken, dot]:
+print()
+print('compute a x b {} times using...'.format(n_iter))
+for f in [mult, mult_broken]:
     print()
     print(f.__name__)
     n_correct = 0
