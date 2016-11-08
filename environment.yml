@@ -1,0 +1,8 @@
+name: mult
+channels:
+- conda-forge
+- defaults
+dependencies:
+- python=3.5
+- numpy=1.11.2
+- cython=0.24.1
